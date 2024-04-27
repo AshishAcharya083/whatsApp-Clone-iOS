@@ -12,6 +12,8 @@
 		2A4231042BDABFEB00EF92A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A4231032BDABFEB00EF92A5 /* Assets.xcassets */; };
 		2A4231072BDABFEB00EF92A5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A4231062BDABFEB00EF92A5 /* Preview Assets.xcassets */; };
 		2A42311B2BDAC49100EF92A5 /* MainTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A42311A2BDAC49100EF92A5 /* MainTabBarView.swift */; };
+		2A42311E2BDCF0BC00EF92A5 /* InboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A42311D2BDCF0BC00EF92A5 /* InboxView.swift */; };
+		2A4231212BDD55F500EF92A5 /* NavigationBarColorModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4231202BDD55F500EF92A5 /* NavigationBarColorModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		2A4231032BDABFEB00EF92A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A4231062BDABFEB00EF92A5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2A42311A2BDAC49100EF92A5 /* MainTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarView.swift; sourceTree = "<group>"; };
+		2A42311D2BDCF0BC00EF92A5 /* InboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxView.swift; sourceTree = "<group>"; };
+		2A4231202BDD55F500EF92A5 /* NavigationBarColorModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarColorModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,7 @@
 		2A4231102BDAC2E600EF92A5 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				2A42311F2BDD55D600EF92A5 /* Modifiers */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -118,6 +123,7 @@
 		2A4231122BDAC2F300EF92A5 /* Inbox */ = {
 			isa = PBXGroup;
 			children = (
+				2A42311C2BDCF0B400EF92A5 /* view */,
 			);
 			path = Inbox;
 			sourceTree = "<group>";
@@ -164,6 +170,22 @@
 				2A42311A2BDAC49100EF92A5 /* MainTabBarView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		2A42311C2BDCF0B400EF92A5 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				2A42311D2BDCF0BC00EF92A5 /* InboxView.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		2A42311F2BDD55D600EF92A5 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				2A4231202BDD55F500EF92A5 /* NavigationBarColorModifier.swift */,
+			);
+			path = Modifiers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,7 +258,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A4231212BDD55F500EF92A5 /* NavigationBarColorModifier.swift in Sources */,
 				2A4231022BDABFE800EF92A5 /* ContentView.swift in Sources */,
+				2A42311E2BDCF0BC00EF92A5 /* InboxView.swift in Sources */,
 				2A42311B2BDAC49100EF92A5 /* MainTabBarView.swift in Sources */,
 				2A4231002BDABFE800EF92A5 /* WhatsApp_CloneApp.swift in Sources */,
 			);
