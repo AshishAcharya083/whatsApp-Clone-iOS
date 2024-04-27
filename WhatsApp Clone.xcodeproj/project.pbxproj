@@ -14,6 +14,7 @@
 		2A42311B2BDAC49100EF92A5 /* MainTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A42311A2BDAC49100EF92A5 /* MainTabBarView.swift */; };
 		2A42311E2BDCF0BC00EF92A5 /* InboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A42311D2BDCF0BC00EF92A5 /* InboxView.swift */; };
 		2A4231212BDD55F500EF92A5 /* NavigationBarColorModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4231202BDD55F500EF92A5 /* NavigationBarColorModifier.swift */; };
+		2A4231232BDD5F4E00EF92A5 /* InboxRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4231222BDD5F4E00EF92A5 /* InboxRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		2A42311A2BDAC49100EF92A5 /* MainTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarView.swift; sourceTree = "<group>"; };
 		2A42311D2BDCF0BC00EF92A5 /* InboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxView.swift; sourceTree = "<group>"; };
 		2A4231202BDD55F500EF92A5 /* NavigationBarColorModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarColorModifier.swift; sourceTree = "<group>"; };
+		2A4231222BDD5F4E00EF92A5 /* InboxRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				2A42311D2BDCF0BC00EF92A5 /* InboxView.swift */,
+				2A4231222BDD5F4E00EF92A5 /* InboxRowView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				2A4231022BDABFE800EF92A5 /* ContentView.swift in Sources */,
 				2A42311E2BDCF0BC00EF92A5 /* InboxView.swift in Sources */,
 				2A42311B2BDAC49100EF92A5 /* MainTabBarView.swift in Sources */,
+				2A4231232BDD5F4E00EF92A5 /* InboxRowView.swift in Sources */,
 				2A4231002BDABFE800EF92A5 /* WhatsApp_CloneApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
