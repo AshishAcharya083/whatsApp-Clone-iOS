@@ -10,7 +10,7 @@ import SwiftUI
 
 
 struct MainTabBarView : View{
-    
+
     @State private var selectedIndex : Int = 0
     
     var body: some View{
@@ -43,7 +43,16 @@ struct MainTabBarView : View{
                 }.onAppear{
                     selectedIndex = 2
                 }
-        }
+            Text("Calls")
+                .tabItem {
+                    VStack{
+                        Image(systemName: "phone")
+                        Text("Calls")
+                    }.environment(\.symbolVariants , selectedIndex == 3 ? .fill : .none )
+                }.onAppear{
+                    selectedIndex = 3
+                }
+        }.tint(.black)
 
            
         
