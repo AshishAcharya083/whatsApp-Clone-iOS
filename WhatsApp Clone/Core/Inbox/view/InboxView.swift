@@ -40,7 +40,6 @@ struct InboxView : View{
                             .navigationBarColor(backgroundColor: Color(.darkGray))
                     }
                     
-                    
                     ToolbarItem(placement:.topBarTrailing){
                         HStack(spacing:20){
                             Image(systemName: "camera")
@@ -50,6 +49,7 @@ struct InboxView : View{
                             .foregroundColor(.white)
                         
                     }
+                   
                     
                 }
             }
