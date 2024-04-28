@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 struct InboxView : View{
+    @ObservedObject var inboxViewModel : InboxViewModel = InboxViewModel()
     var body : some View{
        
         GeometryReader { proxy in
@@ -21,15 +22,22 @@ struct InboxView : View{
                         }
                     }.listStyle(PlainListStyle())
                     
-                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                    Button(action: {
+                        inboxViewModel.showNewMessage.toggle()
+                    }, label: {
                         RoundedRectangle(cornerRadius: 10).foregroundColor(Color(.darkGray)).frame(width: 50 , height: 50).padding().overlay{
                             Image(systemName: "plus.bubble.fill").foregroundColor(.white)
                         }
                     })
                     
-                }.toolbar{
+                }
+                .fullScreenCover(isPresented: $inboxViewModel.showNewMessage, content: {
+                    NewMessageView()
+                })
+                .toolbar{
                     ToolbarItem(placement:.topBarLeading){
-                        Text("WhatsApp").font(.title).fontWeight(.semibold).foregroundColor(.white).navigationBarColor(backgroundColor: Color(.darkGray))
+                        Text("WhatsApp").font(.title).fontWeight(.semibold).foregroundColor(.white)
+                            .navigationBarColor(backgroundColor: Color(.darkGray))
                     }
                     
                     
@@ -42,8 +50,6 @@ struct InboxView : View{
                             .foregroundColor(.white)
                         
                     }
-                    
-                    
                     
                 }
             }
