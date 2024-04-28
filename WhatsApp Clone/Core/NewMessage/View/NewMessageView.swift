@@ -22,10 +22,20 @@ struct NewMessageView: View {
                         .padding(EdgeInsets(top: 8 , leading: 0 , bottom: 0 , trailing: 0))
                         .fontWeight(.semibold)
                         .font(.footnote)
-                        ForEach(0 ..< 5){
-                            _ in
-                            InboxRowView(width: .infinity)
-                        }
+                    ForEach(0 ..< 5){
+                        _ in
+                        HStack{
+                            CircularProfileImageView(imageSize: ProfileImageSize.small , user: User.MOCK_USER)
+                            VStack(alignment:.leading){
+                                Text(User.MOCK_USER.fullName)
+                                    .fontWeight(.semibold)
+                                    .font(.subheadline)
+                                Text("Hi There, I'am using WhatsApp")
+                                    .font(.footnote)
+                                    .foregroundStyle(.gray)
+                            }
+                        }.padding(.bottom , 20)
+                    }
                     
                     
                 }.padding(.top)
@@ -67,23 +77,4 @@ struct NewMessageView: View {
     NewMessageView()
 }
 
-struct ContactView: View {
-    private var imageName: String
-    private var title: String
-    
-    init(imageName: String, title: String) {
-        self.imageName = imageName
-        self.title = title
-    }
-    
-    var body: some View {
-        HStack(spacing:16){
-            Image(systemName: imageName)
-                .resizable()
-                .frame(width: 40, height: 40)
-                .foregroundColor(Color(Color.gray))
-            Text(title)
-            Spacer()
-        }
-    }
-}
+

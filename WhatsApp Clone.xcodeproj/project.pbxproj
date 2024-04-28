@@ -19,6 +19,7 @@
 		2A42312B2BDE3D2600EF92A5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A42312A2BDE3D2600EF92A5 /* User.swift */; };
 		2A42312E2BDE45BA00EF92A5 /* NewMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A42312D2BDE45BA00EF92A5 /* NewMessageView.swift */; };
 		2A4231322BDE490600EF92A5 /* InboxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4231312BDE490600EF92A5 /* InboxViewModel.swift */; };
+		2A4231342BDEC61400EF92A5 /* ContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4231332BDEC61400EF92A5 /* ContactView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		2A42312A2BDE3D2600EF92A5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2A42312D2BDE45BA00EF92A5 /* NewMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageView.swift; sourceTree = "<group>"; };
 		2A4231312BDE490600EF92A5 /* InboxViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxViewModel.swift; sourceTree = "<group>"; };
+		2A4231332BDEC61400EF92A5 /* ContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				2A42312D2BDE45BA00EF92A5 /* NewMessageView.swift */,
+				2A4231332BDEC61400EF92A5 /* ContactView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A42312E2BDE45BA00EF92A5 /* NewMessageView.swift in Sources */,
+				2A4231342BDEC61400EF92A5 /* ContactView.swift in Sources */,
 				2A4231262BDE338900EF92A5 /* CircularProfileImageView.swift in Sources */,
 				2A4231212BDD55F500EF92A5 /* NavigationBarColorModifier.swift in Sources */,
 				2A4231022BDABFE800EF92A5 /* ContentView.swift in Sources */,
