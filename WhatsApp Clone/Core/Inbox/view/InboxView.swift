@@ -18,7 +18,12 @@ struct InboxView : View{
                     List{
                         ForEach(0 ..< 5){
                             _ in
-                            InboxRowView(width: proxy.size.width )
+                            NavigationLink(destination: {
+                                ChatView()
+                                    .navigationBarBackButtonHidden()
+                            }, label: {
+                                InboxRowView(width: proxy.size.width )
+                            })
                         }
                     }.listStyle(PlainListStyle())
                     
