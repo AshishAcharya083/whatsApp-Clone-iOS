@@ -18,19 +18,22 @@ struct InboxView : View{
                     List{
                         ForEach(0 ..< 5){
                             _ in
-                            NavigationLink(destination: {
+                            NavigationLink{
                                 ChatView()
                                     .navigationBarBackButtonHidden()
-                            }, label: {
+                            }label: {
                                 InboxRowView(width: proxy.size.width )
-                            })
+                            }
+                            
+                           
                         }
                     }.listStyle(PlainListStyle())
                     
                     Button(action: {
                         inboxViewModel.showNewMessage.toggle()
                     }, label: {
-                        RoundedRectangle(cornerRadius: 10).foregroundColor(Color(.darkGray)).frame(width: 50 , height: 50).padding().overlay{
+                        RoundedRectangle(cornerRadius: 10).foregroundColor(Color(.darkGray)).frame(width: 50 , height: 50).padding()
+                            .overlay{
                             Image(systemName: "plus.bubble.fill").foregroundColor(.white)
                         }
                     })
