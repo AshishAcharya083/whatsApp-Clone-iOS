@@ -9,29 +9,50 @@ import Foundation
 import SwiftUI
 
 struct ChatMessageCell : View{
+    let isFromCurrentUser : Bool
     var body : some View{
-        VStack(alignment:.leading , spacing: -5){
-            Text("hello ashish")
-            HStack{
-                Text("hello")
-                    .foregroundStyle(.clear)
-                Text("10:00 AM")
-                    .foregroundStyle(Color(.gray))
-                    .font(.footnote)
-        
+        if isFromCurrentUser{
+            VStack(alignment:.leading , spacing: -5){
+                Text("hello ashish")
+                HStack{
+                    Text("hello")
+                        .foregroundStyle(.clear)
+                    Text("10:00 AM")
+                        .foregroundStyle(Color(.gray))
+                        .font(.footnote)
+            
+                }
             }
+            .font(.subheadline)
+            .padding(12)
+            .background(Color("Peach"))
+            .clipShape(ChatBubble(isFromCurrentUser: isFromCurrentUser))
+            .frame(maxWidth: .infinity , alignment: .trailing)
+            .padding(.horizontal)
+        }else{
+            VStack(alignment:.leading , spacing: -5){
+                Text("hello ashish")
+                HStack{
+                    Text("hello")
+                        .foregroundStyle(.clear)
+                    Text("10:00 AM")
+                        .foregroundStyle(Color(.gray))
+                        .font(.footnote)
+            
+                }
+            }
+            .font(.subheadline)
+            .padding(12)
+            .background(.white)
+            .clipShape(ChatBubble(isFromCurrentUser: isFromCurrentUser))
+            .frame(maxWidth: .infinity , alignment: .leading)
+            .padding(.horizontal)
         }
-        .font(.subheadline)
-        .padding(12)
-        .background(Color("Peach"))
-        .clipShape(ChatBubble())
-        .frame(maxWidth: .infinity , alignment: .trailing)
-        .padding(.horizontal)
     }
 }
 
 
 
 #Preview {
-    ChatMessageCell()
+    ChatMessageCell(isFromCurrentUser: Bool.random())
 }
