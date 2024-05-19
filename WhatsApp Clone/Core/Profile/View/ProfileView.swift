@@ -87,7 +87,7 @@ struct OptionView: View {
     }
     
     init(imageName: String, title: String, subtitle: String, secondSubtitle: String? ,   isEditable: Bool) {
-        print("init called with editable \(isEditable)")
+     
         self.imageName = imageName
         self.title = title
         self.subtitle = subtitle
