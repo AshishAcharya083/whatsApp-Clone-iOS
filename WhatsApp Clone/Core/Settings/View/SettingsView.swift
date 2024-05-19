@@ -11,6 +11,7 @@ struct SettingsView: View {
 
     
     @Environment(\.dismiss) private var dismiss
+    @State private var viewModel: SettingsViewModel = SettingsViewModel()
     var body: some View {
         ScrollView{
             VStack(alignment:.leading){
@@ -61,10 +62,13 @@ struct SettingsView: View {
                     }
                 }.padding(.horizontal)
 
-            }.toolbar{
+            }
+            .toolbar(viewModel.tabbarVisibility, for: .tabBar)
+            .toolbar{
                 ToolbarItem(placement: .topBarLeading){
                     HStack{
                         Button{
+                            viewModel.tabbarVisibility = .visible
                            dismiss()
                         }label: {
                             Image(systemName: "arrow.backward")

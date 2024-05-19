@@ -14,6 +14,8 @@
 		2A378F6F2BF8D35400032098 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A378F6E2BF8D35400032098 /* ProfileViewModel.swift */; };
 		2A378F722BFA01E400032098 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A378F712BFA01E400032098 /* SettingsView.swift */; };
 		2A378F752BFA050300032098 /* SettingsOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A378F742BFA050300032098 /* SettingsOption.swift */; };
+		2A378F782BFA1F3C00032098 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A378F772BFA1F3C00032098 /* SettingsViewModel.swift */; };
+		2A378F7B2BFA349400032098 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A378F7A2BFA349400032098 /* WelcomeView.swift */; };
 		2A4231002BDABFE800EF92A5 /* WhatsApp_CloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4230FF2BDABFE800EF92A5 /* WhatsApp_CloneApp.swift */; };
 		2A4231022BDABFE800EF92A5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4231012BDABFE800EF92A5 /* ContentView.swift */; };
 		2A4231042BDABFEB00EF92A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A4231032BDABFEB00EF92A5 /* Assets.xcassets */; };
@@ -40,6 +42,8 @@
 		2A378F6E2BF8D35400032098 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		2A378F712BFA01E400032098 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		2A378F742BFA050300032098 /* SettingsOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsOption.swift; sourceTree = "<group>"; };
+		2A378F772BFA1F3C00032098 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		2A378F7A2BFA349400032098 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		2A4230FC2BDABFE800EF92A5 /* WhatsApp Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WhatsApp Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A4230FF2BDABFE800EF92A5 /* WhatsApp_CloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsApp_CloneApp.swift; sourceTree = "<group>"; };
 		2A4231012BDABFE800EF92A5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -98,6 +102,22 @@
 			isa = PBXGroup;
 			children = (
 				2A378F712BFA01E400032098 /* SettingsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2A378F762BFA1F3100032098 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2A378F772BFA1F3C00032098 /* SettingsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2A378F792BFA348100032098 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2A378F7A2BFA349400032098 /* WelcomeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -168,6 +188,7 @@
 		2A42310F2BDAC2E100EF92A5 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				2A378F792BFA348100032098 /* View */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -234,6 +255,7 @@
 		2A4231182BDAC43E00EF92A5 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				2A378F762BFA1F3100032098 /* ViewModel */,
 				2A378F702BFA01DA00032098 /* View */,
 			);
 			path = Settings;
@@ -412,6 +434,7 @@
 				2A4231342BDEC61400EF92A5 /* ContactView.swift in Sources */,
 				2A4231262BDE338900EF92A5 /* CircularProfileImageView.swift in Sources */,
 				2A4231212BDD55F500EF92A5 /* NavigationBarColorModifier.swift in Sources */,
+				2A378F7B2BFA349400032098 /* WelcomeView.swift in Sources */,
 				2A42313E2BEB324900EF92A5 /* ChatMessageCell.swift in Sources */,
 				2A4231022BDABFE800EF92A5 /* ContentView.swift in Sources */,
 				2A378F6C2BF8D11500032098 /* ProfileView.swift in Sources */,
@@ -421,6 +444,7 @@
 				2A42311B2BDAC49100EF92A5 /* MainTabBarView.swift in Sources */,
 				2A4231322BDE490600EF92A5 /* InboxViewModel.swift in Sources */,
 				2A4231232BDD5F4E00EF92A5 /* InboxRowView.swift in Sources */,
+				2A378F782BFA1F3C00032098 /* SettingsViewModel.swift in Sources */,
 				2A4231002BDABFE800EF92A5 /* WhatsApp_CloneApp.swift in Sources */,
 				2A378F752BFA050300032098 /* SettingsOption.swift in Sources */,
 			);
