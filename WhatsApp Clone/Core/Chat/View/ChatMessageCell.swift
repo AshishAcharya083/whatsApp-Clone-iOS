@@ -10,43 +10,55 @@ import SwiftUI
 
 struct ChatMessageCell : View{
     let isFromCurrentUser : Bool
+    let message: Message
     var body : some View{
         if isFromCurrentUser{
-            VStack(alignment:.leading , spacing: -5){
-                Text("hello ashish")
-                HStack{
-                    Text("hello")
-                        .foregroundStyle(.clear)
-                    Text("10:00 AM")
-                        .foregroundStyle(Color(.gray))
-                        .font(.footnote)
-            
+            HStack ( spacing:8 ){
+                
+                VStack(alignment:.leading , spacing: -5){
+                    Text(message.messageText)
+                    HStack{
+                        Text(message.messageText)
+                            .foregroundStyle(.clear)
+                        Text("10:00 AM")
+                            .foregroundStyle(Color(.gray))
+                            .font(.footnote)
+                
+                    }
                 }
+               
+                .font(.subheadline)
+                .padding(12)
+                .background(Color("Peach"))
+                .clipShape(ChatBubble(isFromCurrentUser: isFromCurrentUser))
+                CircularProfileImageView(imageSize: .xsmall, user: User.MOCK_USER)
+          
+            
             }
-            .font(.subheadline)
-            .padding(12)
-            .background(Color("Peach"))
-            .clipShape(ChatBubble(isFromCurrentUser: isFromCurrentUser))
             .frame(maxWidth: .infinity , alignment: .trailing)
             .padding(.horizontal)
         }else{
-            VStack(alignment:.leading , spacing: -5){
-                Text("hello ashish")
-                HStack{
-                    Text("hello")
-                        .foregroundStyle(.clear)
-                    Text("10:00 AM")
-                        .foregroundStyle(Color(.gray))
-                        .font(.footnote)
-            
+            HStack (spacing:8){
+                CircularProfileImageView(imageSize: .xsmall, user: User.MOCK_USER)
+                VStack(alignment:.leading , spacing: -5){
+                    Text(message.messageText)
+                    HStack{
+                        Text(message.messageText)
+                            .foregroundStyle(.clear)
+                        Text("10:00 AM")
+                            .foregroundStyle(Color(.gray))
+                            .font(.footnote)
+                
+                    }
                 }
-            }
-            .font(.subheadline)
-            .padding(12)
-            .background(.white)
-            .clipShape(ChatBubble(isFromCurrentUser: isFromCurrentUser))
-            .frame(maxWidth: .infinity , alignment: .leading)
-            .padding(.horizontal)
+                .font(.subheadline)
+                .padding(12)
+                .background(Color("Peach"))
+                .clipShape(ChatBubble(isFromCurrentUser: isFromCurrentUser))
+                .frame(maxWidth: .infinity , alignment: .leading)
+         
+            
+            }.padding(.horizontal)
         }
     }
 }
@@ -54,5 +66,5 @@ struct ChatMessageCell : View{
 
 
 #Preview {
-    ChatMessageCell(isFromCurrentUser: Bool.random())
+    ChatMessageCell(isFromCurrentUser: Bool.random() , message:MessageGroup.MOCK_MESSAGE_GROUP.first!.messages.first! )
 }

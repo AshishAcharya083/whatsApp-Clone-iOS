@@ -52,7 +52,13 @@ struct InboxView : View{
                         HStack(spacing:20){
                             Image(systemName: "camera")
                             Image(systemName: "magnifyingglass")
-                            Image(systemName: "ellipsis")
+                            NavigationLink {
+                                ProfileView()
+                                    .navigationBarBackButtonHidden()
+                            } label: {
+                                Image(systemName: "ellipsis")
+                            }
+
                         }.fontWeight(.semibold)
                             .foregroundColor(.white)
                         

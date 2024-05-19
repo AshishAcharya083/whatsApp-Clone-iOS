@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		2A378F622BF66BA400032098 /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A378F612BF66BA400032098 /* ChatBubble.swift */; };
+		2A378F652BF885D600032098 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A378F642BF885D600032098 /* Date.swift */; };
+		2A378F682BF897FE00032098 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A378F672BF897FE00032098 /* Message.swift */; };
+		2A378F6C2BF8D11500032098 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A378F6B2BF8D11500032098 /* ProfileView.swift */; };
+		2A378F6F2BF8D35400032098 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A378F6E2BF8D35400032098 /* ProfileViewModel.swift */; };
 		2A4231002BDABFE800EF92A5 /* WhatsApp_CloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4230FF2BDABFE800EF92A5 /* WhatsApp_CloneApp.swift */; };
 		2A4231022BDABFE800EF92A5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4231012BDABFE800EF92A5 /* ContentView.swift */; };
 		2A4231042BDABFEB00EF92A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A4231032BDABFEB00EF92A5 /* Assets.xcassets */; };
@@ -28,6 +32,10 @@
 
 /* Begin PBXFileReference section */
 		2A378F612BF66BA400032098 /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
+		2A378F642BF885D600032098 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		2A378F672BF897FE00032098 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		2A378F6B2BF8D11500032098 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		2A378F6E2BF8D35400032098 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		2A4230FC2BDABFE800EF92A5 /* WhatsApp Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WhatsApp Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A4230FF2BDABFE800EF92A5 /* WhatsApp_CloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsApp_CloneApp.swift; sourceTree = "<group>"; };
 		2A4231012BDABFE800EF92A5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,6 +66,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A378F632BF885C300032098 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2A378F642BF885D600032098 /* Date.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2A378F692BF8D0E400032098 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2A378F6B2BF8D11500032098 /* ProfileView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2A378F6D2BF8D34600032098 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2A378F6E2BF8D35400032098 /* ProfileViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		2A4230F32BDABFE800EF92A5 = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +198,8 @@
 		2A4231142BDAC30000EF92A5 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				2A378F6D2BF8D34600032098 /* ViewModel */,
+				2A378F692BF8D0E400032098 /* View */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -229,6 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				2A42312A2BDE3D2600EF92A5 /* User.swift */,
+				2A378F672BF897FE00032098 /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -243,6 +278,7 @@
 		2A4231292BDE3D1B00EF92A5 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				2A378F632BF885C300032098 /* Extensions */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -353,13 +389,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A42313A2BE526FE00EF92A5 /* ChatViewModel.swift in Sources */,
+				2A378F6F2BF8D35400032098 /* ProfileViewModel.swift in Sources */,
 				2A378F622BF66BA400032098 /* ChatBubble.swift in Sources */,
 				2A42312E2BDE45BA00EF92A5 /* NewMessageView.swift in Sources */,
+				2A378F682BF897FE00032098 /* Message.swift in Sources */,
+				2A378F652BF885D600032098 /* Date.swift in Sources */,
 				2A4231342BDEC61400EF92A5 /* ContactView.swift in Sources */,
 				2A4231262BDE338900EF92A5 /* CircularProfileImageView.swift in Sources */,
 				2A4231212BDD55F500EF92A5 /* NavigationBarColorModifier.swift in Sources */,
 				2A42313E2BEB324900EF92A5 /* ChatMessageCell.swift in Sources */,
 				2A4231022BDABFE800EF92A5 /* ContentView.swift in Sources */,
+				2A378F6C2BF8D11500032098 /* ProfileView.swift in Sources */,
 				2A42313C2BE52CC300EF92A5 /* ChatView.swift in Sources */,
 				2A42311E2BDCF0BC00EF92A5 /* InboxView.swift in Sources */,
 				2A42312B2BDE3D2600EF92A5 /* User.swift in Sources */,
