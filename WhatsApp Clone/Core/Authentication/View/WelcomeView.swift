@@ -53,24 +53,12 @@ struct WelcomeView: View {
                         }.padding(.horizontal)
                             .foregroundStyle(Color(.darkGray))
                             .font(.subheadline)
-                            
+                        
                     }.padding(.top , 24)
                 Spacer()
-                Button{
-                 
-                        
-                    
-                }label: {
-                    Text("Agree and Continue")
-                    
-                        .frame(width: proxy.size.width - 80, height: 48)
-                        .background(Color(.darkGray))
-                        .foregroundStyle(Color(.white))
-                        .font(.headline)
-                        .clipShape(RoundedRectangle(cornerRadius: 26))
-                }
-          
-                    
+                AgreeAndContinueButton(proxy.size.width)
+                
+                
                 
             }
             .padding(.horizontal)
@@ -87,5 +75,30 @@ struct WelcomeView: View {
 extension Text{
     func coloredText(_ color: Color)-> Text{
         return self.foregroundStyle(color)
+    }
+}
+
+struct AgreeAndContinueButton: View {
+    
+    init(_ width: CGFloat) {
+        self.width = width
+    }
+    
+    private var width: CGFloat
+    
+    var body: some View {
+        Button{
+            
+            
+            
+        }label: {
+            Text("Agree and Continue")
+            
+                .frame(width: width - 80, height: 48)
+                .background(Color(.darkGray))
+                .foregroundStyle(Color(.white))
+                .font(.headline)
+                .clipShape(RoundedRectangle(cornerRadius: 26))
+        }
     }
 }
