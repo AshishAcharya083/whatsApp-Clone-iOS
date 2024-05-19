@@ -34,27 +34,10 @@ struct WelcomeView: View {
         
                     
                 Text("\(Text("Read our")) \(Text("Privacy Policy").coloredText(.blue)). Tap Agree and continue to accept the \(Text("Terms of Service").coloredText(.blue))")
-                       
-                
-                
                     .font(.subheadline)
                     .foregroundStyle(.gray)
                 
-                Capsule()
-                    .fill(Color(.systemGray5))
-                    .frame(width: 160, height: 40)
-                    .overlay{
-                        HStack{
-                            Image(systemName: "network")
-                            Spacer()
-                            Text("English")
-                            Spacer()
-                            Image(systemName: "chevron.down")
-                        }.padding(.horizontal)
-                            .foregroundStyle(Color(.darkGray))
-                            .font(.subheadline)
-                        
-                    }.padding(.top , 24)
+                LanguageButtonView()
                 Spacer()
                 AgreeAndContinueButton(proxy.size.width)
                 
@@ -100,5 +83,25 @@ struct AgreeAndContinueButton: View {
                 .font(.headline)
                 .clipShape(RoundedRectangle(cornerRadius: 26))
         }
+    }
+}
+
+struct LanguageButtonView: View {
+    var body: some View {
+        Capsule()
+            .fill(Color(.systemGray5))
+            .frame(width: 160, height: 40)
+            .overlay{
+                HStack{
+                    Image(systemName: "network")
+                    Spacer()
+                    Text("English")
+                    Spacer()
+                    Image(systemName: "chevron.down")
+                }.padding(.horizontal)
+                    .foregroundStyle(Color(.darkGray))
+                    .font(.subheadline)
+                
+            }.padding(.top , 24)
     }
 }
