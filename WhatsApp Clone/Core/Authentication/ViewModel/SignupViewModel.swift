@@ -13,4 +13,8 @@ class SignupViewModel : ObservableObject{
     @Published var fullName: String = ""
     @Published var phoneNumber: String = ""
     @Published var password: String = ""
+    
+    func createUser()async throws {
+        try await AuthService.shared.createUser(email: email, password: password, fullName: fullName, phoneNumber: phoneNumber)
+    }
 }

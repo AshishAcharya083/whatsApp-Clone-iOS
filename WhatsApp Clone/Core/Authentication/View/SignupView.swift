@@ -26,9 +26,13 @@ struct SignupView: View {
                 FloatingField(title: "Phone Number", placeHolder: "", text: $viewModel.phoneNumber)
                 FloatingField(title: "Password", placeHolder: "", text: $viewModel.password)
                 
-                Button(action: {}, label: {
+                Button(action: {
+                    Task{
+                        try await viewModel.createUser()
+                    }
+                }, label: {
                     Text("Signup")
-                        .modifier(AuthenticationButtonModifier())
+                        .authenticationViewModifier()
                      
                 }).padding(.vertical)
                 Spacer()

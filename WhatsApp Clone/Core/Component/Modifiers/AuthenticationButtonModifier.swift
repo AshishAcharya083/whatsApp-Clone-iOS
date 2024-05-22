@@ -22,6 +22,6 @@ struct AuthenticationButtonModifier : ViewModifier{
 
 extension View{
     func authenticationViewModifier() -> some View{
-        self.modifier(AuthenticationButtonModifier())
+      return  self.modifier(AuthenticationButtonModifier())
     }
 }
