@@ -23,7 +23,11 @@ struct FloatingField: View {
             VStack{
                 if title == "Password"{
                     SecureField(placeHolder , text: $text)
-                }else{
+                }else if title == "Phone Number"{
+                    TextField(placeHolder , text: $text)
+                        .keyboardType(.numberPad)
+                }
+                else{
                     TextField(placeHolder , text: $text)
                 }
                 Divider()

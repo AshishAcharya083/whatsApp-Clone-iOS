@@ -32,14 +32,8 @@ struct LoginView: View {
                     
                 Button(action: {}, label: {
                     Text("Login")
-                        .foregroundStyle(.white)
-                        .fontWeight(.semibold)
-                    
-                        .frame(width: 360, height: 44)
-                        .background(.green)
-                    
-            
-                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                        .modifier(AuthenticationButtonModifier())
+                        
                      
                 }).padding(.vertical)
                 

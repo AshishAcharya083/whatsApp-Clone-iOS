@@ -21,6 +21,7 @@
 		2A378F822BFDB03400032098 /* FloatingField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A378F812BFDB03300032098 /* FloatingField.swift */; };
 		2A378F842BFDB33600032098 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A378F832BFDB33600032098 /* SignupView.swift */; };
 		2A378F862BFDB43500032098 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A378F852BFDB43500032098 /* SignupViewModel.swift */; };
+		2A378F882BFE598600032098 /* AuthenticationButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A378F872BFE598600032098 /* AuthenticationButtonModifier.swift */; };
 		2A4231002BDABFE800EF92A5 /* WhatsApp_CloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4230FF2BDABFE800EF92A5 /* WhatsApp_CloneApp.swift */; };
 		2A4231022BDABFE800EF92A5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4231012BDABFE800EF92A5 /* ContentView.swift */; };
 		2A4231042BDABFEB00EF92A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A4231032BDABFEB00EF92A5 /* Assets.xcassets */; };
@@ -54,6 +55,7 @@
 		2A378F812BFDB03300032098 /* FloatingField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingField.swift; sourceTree = "<group>"; };
 		2A378F832BFDB33600032098 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		2A378F852BFDB43500032098 /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
+		2A378F872BFE598600032098 /* AuthenticationButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationButtonModifier.swift; sourceTree = "<group>"; };
 		2A4230FC2BDABFE800EF92A5 /* WhatsApp Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WhatsApp Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A4230FF2BDABFE800EF92A5 /* WhatsApp_CloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsApp_CloneApp.swift; sourceTree = "<group>"; };
 		2A4231012BDABFE800EF92A5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -304,6 +306,7 @@
 			isa = PBXGroup;
 			children = (
 				2A4231202BDD55F500EF92A5 /* NavigationBarColorModifier.swift */,
+				2A378F872BFE598600032098 /* AuthenticationButtonModifier.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -468,6 +471,7 @@
 				2A378F822BFDB03400032098 /* FloatingField.swift in Sources */,
 				2A42313C2BE52CC300EF92A5 /* ChatView.swift in Sources */,
 				2A42311E2BDCF0BC00EF92A5 /* InboxView.swift in Sources */,
+				2A378F882BFE598600032098 /* AuthenticationButtonModifier.swift in Sources */,
 				2A42312B2BDE3D2600EF92A5 /* User.swift in Sources */,
 				2A42311B2BDAC49100EF92A5 /* MainTabBarView.swift in Sources */,
 				2A4231322BDE490600EF92A5 /* InboxViewModel.swift in Sources */,

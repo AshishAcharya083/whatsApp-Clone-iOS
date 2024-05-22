@@ -28,14 +28,7 @@ struct SignupView: View {
                 
                 Button(action: {}, label: {
                     Text("Signup")
-                        .foregroundStyle(.white)
-                        .fontWeight(.semibold)
-                    
-                        .frame(width: 360, height: 44)
-                        .background(.green)
-                    
-            
-                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                        .modifier(AuthenticationButtonModifier())
                      
                 }).padding(.vertical)
                 Spacer()
