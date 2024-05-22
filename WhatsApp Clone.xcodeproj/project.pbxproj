@@ -18,6 +18,9 @@
 		2A378F7B2BFA349400032098 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A378F7A2BFA349400032098 /* WelcomeView.swift */; };
 		2A378F7D2BFA63D000032098 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A378F7C2BFA63D000032098 /* LoginView.swift */; };
 		2A378F802BFA658200032098 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A378F7F2BFA658200032098 /* LoginViewModel.swift */; };
+		2A378F822BFDB03400032098 /* FloatingField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A378F812BFDB03300032098 /* FloatingField.swift */; };
+		2A378F842BFDB33600032098 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A378F832BFDB33600032098 /* SignupView.swift */; };
+		2A378F862BFDB43500032098 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A378F852BFDB43500032098 /* SignupViewModel.swift */; };
 		2A4231002BDABFE800EF92A5 /* WhatsApp_CloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4230FF2BDABFE800EF92A5 /* WhatsApp_CloneApp.swift */; };
 		2A4231022BDABFE800EF92A5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4231012BDABFE800EF92A5 /* ContentView.swift */; };
 		2A4231042BDABFEB00EF92A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A4231032BDABFEB00EF92A5 /* Assets.xcassets */; };
@@ -48,6 +51,9 @@
 		2A378F7A2BFA349400032098 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		2A378F7C2BFA63D000032098 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		2A378F7F2BFA658200032098 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		2A378F812BFDB03300032098 /* FloatingField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingField.swift; sourceTree = "<group>"; };
+		2A378F832BFDB33600032098 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		2A378F852BFDB43500032098 /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
 		2A4230FC2BDABFE800EF92A5 /* WhatsApp Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WhatsApp Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A4230FF2BDABFE800EF92A5 /* WhatsApp_CloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsApp_CloneApp.swift; sourceTree = "<group>"; };
 		2A4231012BDABFE800EF92A5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -123,6 +129,7 @@
 			children = (
 				2A378F7A2BFA349400032098 /* WelcomeView.swift */,
 				2A378F7C2BFA63D000032098 /* LoginView.swift */,
+				2A378F832BFDB33600032098 /* SignupView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -131,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				2A378F7F2BFA658200032098 /* LoginViewModel.swift */,
+				2A378F852BFDB43500032098 /* SignupViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -304,6 +312,7 @@
 			isa = PBXGroup;
 			children = (
 				2A4231252BDE338900EF92A5 /* CircularProfileImageView.swift */,
+				2A378F812BFDB03300032098 /* FloatingField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -447,6 +456,8 @@
 				2A378F7D2BFA63D000032098 /* LoginView.swift in Sources */,
 				2A378F652BF885D600032098 /* Date.swift in Sources */,
 				2A4231342BDEC61400EF92A5 /* ContactView.swift in Sources */,
+				2A378F842BFDB33600032098 /* SignupView.swift in Sources */,
+				2A378F862BFDB43500032098 /* SignupViewModel.swift in Sources */,
 				2A4231262BDE338900EF92A5 /* CircularProfileImageView.swift in Sources */,
 				2A4231212BDD55F500EF92A5 /* NavigationBarColorModifier.swift in Sources */,
 				2A378F7B2BFA349400032098 /* WelcomeView.swift in Sources */,
@@ -454,6 +465,7 @@
 				2A378F802BFA658200032098 /* LoginViewModel.swift in Sources */,
 				2A4231022BDABFE800EF92A5 /* ContentView.swift in Sources */,
 				2A378F6C2BF8D11500032098 /* ProfileView.swift in Sources */,
+				2A378F822BFDB03400032098 /* FloatingField.swift in Sources */,
 				2A42313C2BE52CC300EF92A5 /* ChatView.swift in Sources */,
 				2A42311E2BDCF0BC00EF92A5 /* InboxView.swift in Sources */,
 				2A42312B2BDE3D2600EF92A5 /* User.swift in Sources */,

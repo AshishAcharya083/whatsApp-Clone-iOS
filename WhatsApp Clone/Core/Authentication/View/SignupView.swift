@@ -1,19 +1,20 @@
 //
-//  LoginView.swift
+//  SignupView.swift
 //  WhatsApp Clone
 //
-//  Created by Ashish Acharya  on 5/19/24.
+//  Created by Ashish Acharya  on 5/22/24.
 //
 
 import SwiftUI
 
-struct LoginView: View {
+struct SignupView: View {
     
-    @StateObject private var viewModel = LoginViewModel()
+    @StateObject private var viewModel  = SignupViewModel()
     
     var body: some View {
         NavigationStack{
             VStack{
+           
                 Spacer()
                 Image("logo")
                     .resizable()
@@ -21,17 +22,12 @@ struct LoginView: View {
                     .frame(width: 150, height: 150)
                     .padding()
                 FloatingField(title: "Email", placeHolder: "", text: $viewModel.email)
-                FloatingField(title: "Password", placeHolder: "", text: $viewModel.passowrd)
-            
-                        Text("Forgot Password ?")
-                            .font(.footnote)
-                            .fontWeight(.semibold)
-                            .padding(.trailing)
-                            .frame(maxWidth: .infinity , alignment: .trailing)
-                            .padding(.top)
-                    
+                FloatingField(title: "Full Name", placeHolder: "", text: $viewModel.fullName)
+                FloatingField(title: "Phone Number", placeHolder: "", text: $viewModel.phoneNumber)
+                FloatingField(title: "Password", placeHolder: "", text: $viewModel.password)
+                
                 Button(action: {}, label: {
-                    Text("Login")
+                    Text("Signup")
                         .foregroundStyle(.white)
                         .fontWeight(.semibold)
                     
@@ -42,16 +38,15 @@ struct LoginView: View {
                         .clipShape(RoundedRectangle(cornerRadius: 10))
                      
                 }).padding(.vertical)
-                
                 Spacer()
                 Divider()
                 HStack{
-                    Text("Don't have an account ? ")
+                    Text("Already have an account ? ")
                     NavigationLink {
-                        SignupView()
+                        LoginView()
                             .navigationBarBackButtonHidden()
                     } label: {
-                        Text("Sign Up")
+                        Text("Login")
                             .fontWeight(.semibold)
                     }
 
@@ -64,7 +59,5 @@ struct LoginView: View {
 }
 
 #Preview {
-    LoginView()
+    SignupView()
 }
-
-

@@ -10,4 +10,5 @@ import SwiftUI
 
 class LoginViewModel : ObservableObject{
     @Published var email: String = ""
+    @Published var passowrd : String = ""
 }
