@@ -32,7 +32,7 @@ struct LoginView: View {
                     
                 Button(action: {}, label: {
                     Text("Login")
-                        .modifier(AuthenticationButtonModifier())
+                        .authenticationViewModifier()
                         
                      
                 }).padding(.vertical)

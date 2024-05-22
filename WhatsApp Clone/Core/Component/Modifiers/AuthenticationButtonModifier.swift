@@ -19,3 +19,9 @@ struct AuthenticationButtonModifier : ViewModifier{
     
     
 }
+
+extension View{
+    func authenticationViewModifier() -> some View{
+        self.modifier(AuthenticationButtonModifier())
+    }
+}
