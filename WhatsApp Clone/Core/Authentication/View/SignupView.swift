@@ -14,7 +14,7 @@ struct SignupView: View {
     var body: some View {
         NavigationStack{
             VStack{
-           
+                
                 Spacer()
                 Image("logo")
                     .resizable()
@@ -27,9 +27,11 @@ struct SignupView: View {
                 FloatingField(title: "Password", placeHolder: "", text: $viewModel.password)
                 
                 Button(action: {
-                    Task{
-                        try await viewModel.createUser()
-                    }
+                    print("create user called in UI with email")
+                    
+                    Task { try await viewModel.createUser() }
+                    
+                    
                 }, label: {
                     Text("Signup")
                         .authenticationViewModifier()

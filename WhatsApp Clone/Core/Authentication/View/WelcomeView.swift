@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct WelcomeView: View {
+    @StateObject private var viewModel = WelcomeViewModel()
     var body: some View {
         GeometryReader { proxy in
             VStack{
@@ -39,13 +40,17 @@ struct WelcomeView: View {
                 
                 LanguageButtonView()
                 Spacer()
-                AgreeAndContinueButton(proxy.size.width)
+                AgreeAndContinueButton(proxy.size.width , viewModel)
                 
                 
                 
             }
             .padding(.horizontal)
             .padding(.bottom)
+            .fullScreenCover(isPresented: $viewModel.showLoginView, content: {
+                LoginView()
+                    .navigationBarBackButtonHidden()
+            })
         }
     }
 }
@@ -63,8 +68,11 @@ extension Text{
 
 struct AgreeAndContinueButton: View {
     
-    init(_ width: CGFloat) {
+   @StateObject private var viewModel: WelcomeViewModel
+    
+    init(_ width: CGFloat , _ viewModel: WelcomeViewModel) {
         self.width = width
+        self._viewModel = StateObject(wrappedValue: viewModel)
     }
     
     private var width: CGFloat
@@ -72,7 +80,7 @@ struct AgreeAndContinueButton: View {
     var body: some View {
         Button{
             
-            
+            viewModel.showLoginView.toggle()
             
         }label: {
             Text("Agree and Continue")

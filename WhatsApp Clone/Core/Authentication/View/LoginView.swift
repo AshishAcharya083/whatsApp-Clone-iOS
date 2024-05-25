@@ -30,7 +30,11 @@ struct LoginView: View {
                             .frame(maxWidth: .infinity , alignment: .trailing)
                             .padding(.top)
                     
-                Button(action: {}, label: {
+                Button(action: {
+                    Task{
+                       try await viewModel.loginUser()
+                    }
+                }, label: {
                     Text("Login")
                         .authenticationViewModifier()
                         

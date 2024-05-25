@@ -41,23 +41,34 @@ struct SettingsView: View {
                 
                 VStack(alignment:.leading ,  spacing:32){
                     ForEach(SettingsOption.allCases){option in
-                        HStack(spacing:24){
-                            Image(systemName: option.imageName)
-                                .resizable()
-                                .frame(width: 24, height: 24)
-                                .foregroundColor(.gray)
-                            VStack(alignment:.leading){
-                                Text(option.title)
-                                    .font(.headline)
-                                    .fontWeight(.semibold)
-                                if option.subtitle != ""{
-                                    Text(option.subtitle)
-                                        .font(.footnote)
-                                        .foregroundStyle(.gray)
+                        Button {
+                            if(option == .logout){
+                                 Task{
+                                     try   viewModel.logOut()
                                 }
                             }
-                                
+                        }label: {
+                           
+                            HStack(spacing:24){
+                                Image(systemName: option.imageName)
+                                    .resizable()
+                                    .frame(width: 24, height: 24)
+                                    .foregroundColor(.gray)
+                                VStack(alignment:.leading){
+                                    Text(option.title)
+                                        .font(.headline)
+                                        .fontWeight(.semibold)
+                                        .foregroundStyle(.black)
+                                    if option.subtitle != ""{
+                                        Text(option.subtitle)
+                                            .font(.footnote)
+                                            .foregroundStyle(.gray)
+                                    }
+                                }
+                                    
+                            }
                         }
+                        
                       
                     }
                 }.padding(.horizontal)
