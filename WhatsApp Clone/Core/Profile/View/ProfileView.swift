@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import PhotosUI
 
 struct ProfileView: View {
     
@@ -17,23 +18,28 @@ struct ProfileView: View {
     
     var body: some View {
         VStack{
-            ZStack(alignment:.bottomTrailing){
-                CircularProfileImageView(imageSize: .xxlarge, user: User.MOCK_USER)
-              
-                Circle()
-                    .frame(width: 40, height: 40)
-                    .foregroundStyle(Color(.darkGray))
-                    .overlay{
-                        Image(systemName: "camera.fill")
-                            .resizable()
-                            .frame(width: 16, height: 16)
-                            .foregroundStyle(.white)
+            Button {
+                profileViewModel.showPhotoPicker.toggle()
+            } label: {
+                ZStack(alignment:.bottomTrailing){
+                    CircularProfileImageView(imageSize: .xxlarge, user: User.MOCK_USER)
+                  
+                    Circle()
+                        .frame(width: 40, height: 40)
+                        .foregroundStyle(Color(.darkGray))
+                        .overlay{
+                            Image(systemName: "camera.fill")
+                                .resizable()
+                                .frame(width: 16, height: 16)
+                                .foregroundStyle(.white)
+                        
+                        }
                     
-                    }
-                
+                   
                
-           
+                }
             }
+
      
             VStack(alignment:.leading ,  spacing:32){
                 OptionView(imageName: "person.fill", title: "Name", subtitle: User.MOCK_USER.fullName ,  secondSubtitle: "This is not your username or pin. This name will be visible to your WhastaApp contacts." , isEditable: true  )
@@ -63,6 +69,7 @@ struct ProfileView: View {
                 }
             }
         }
+        .photosPicker(isPresented: $profileViewModel.showPhotoPicker, selection: $profileViewModel.selectedImage)
     }
 }
 
