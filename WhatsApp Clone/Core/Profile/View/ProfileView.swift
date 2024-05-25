@@ -22,7 +22,18 @@ struct ProfileView: View {
                 profileViewModel.showPhotoPicker.toggle()
             } label: {
                 ZStack(alignment:.bottomTrailing){
-                    CircularProfileImageView(imageSize: .xxlarge, user: User.MOCK_USER)
+                    ZStack{
+                        CircularProfileImageView(imageSize: .xxlarge, user: User.MOCK_USER)
+                        if let profileImage = profileViewModel.profileImage{
+                            
+                            profileImage
+                                .resizable()
+                                .frame(width: 120, height: 120)
+                                .scaledToFill()
+                                .clipShape(Circle())
+                        }
+                    }
+                  
                   
                     Circle()
                         .frame(width: 40, height: 40)
