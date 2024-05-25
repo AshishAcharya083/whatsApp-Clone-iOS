@@ -51,6 +51,8 @@ class AuthService{
     }
     
     func signOut()  throws{
+        self.userSession = nil
+        UserService.shared.currentUser = nil
         try  Auth.auth().signOut();
     }
     
@@ -58,8 +60,7 @@ class AuthService{
     private func loadUserData() async throws{
         Task{
             try await UserService.shared.fetchCurrentUser()
-            self.userSession = nil
-            UserService.shared.currentUser = nil
+        
         }
     }
 }

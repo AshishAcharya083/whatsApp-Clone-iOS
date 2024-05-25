@@ -29,6 +29,7 @@ struct FloatingField: View {
                 }
                 else{
                     TextField(placeHolder , text: $text)
+                        .textInputAutocapitalization(.never)
                 }
                 Divider()
             }

@@ -42,6 +42,7 @@ struct SettingsView: View {
                 VStack(alignment:.leading ,  spacing:32){
                     ForEach(SettingsOption.allCases){option in
                         Button {
+                            print("option is \(option)")
                             if(option == .logout){
                                  Task{
                                      try   viewModel.logOut()
