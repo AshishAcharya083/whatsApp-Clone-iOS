@@ -14,6 +14,12 @@ struct ProfileView: View {
     
     @StateObject private var profileViewModel : ProfileViewModel = ProfileViewModel()
     
+    private var user : User?
+    
+    init(userModel: User?){
+        self.user = userModel
+    }
+    
    
     
     var body: some View {
@@ -23,7 +29,7 @@ struct ProfileView: View {
             } label: {
                 ZStack(alignment:.bottomTrailing){
                     ZStack{
-                        CircularProfileImageView(imageSize: .xxlarge, user: User.MOCK_USER)
+                        CircularProfileImageView(imageSize: .xxlarge, user: user)
                         if let profileImage = profileViewModel.profileImage{
                             
                             profileImage
@@ -32,6 +38,13 @@ struct ProfileView: View {
                                 .scaledToFill()
                                 .clipShape(Circle())
                         }
+//                        if let networkProfileImage = user?.profileImageUrl {
+//                            Image(networkProfileImage)
+//                                .resizable()
+//                                .frame(width: 120, height: 120)
+//                                .scaledToFill()
+//                                .clipShape(Circle())
+//                        }
                     }
                   
                   
@@ -45,19 +58,16 @@ struct ProfileView: View {
                                 .foregroundStyle(.white)
                         
                         }
-                    
-                   
-               
                 }
             }
 
      
             VStack(alignment:.leading ,  spacing:32){
-                OptionView(imageName: "person.fill", title: "Name", subtitle: User.MOCK_USER.fullName ,  secondSubtitle: "This is not your username or pin. This name will be visible to your WhastaApp contacts." , isEditable: true  )
+                OptionView(imageName: "person.fill", title: "Name", subtitle: user?.fullName ?? "",  secondSubtitle: "This is not your username or pin. This name will be visible to your WhastaApp contacts." , isEditable: true  )
                 
                 OptionView(imageName: "exclamationmark.circle", title: "About", subtitle: "Hey there ! I'am using WhatsApp", secondSubtitle: nil , isEditable: true)
                 
-                OptionView(imageName: "phone.fill", title: "Phone", subtitle: User.MOCK_USER.phoneNumber, secondSubtitle: nil)
+                OptionView(imageName: "phone.fill", title: "Phone", subtitle: user?.phoneNumber ?? "", secondSubtitle: nil)
             }
             Spacer()
         }
@@ -85,7 +95,7 @@ struct ProfileView: View {
 }
 
 #Preview {
-    ProfileView()
+    ProfileView(userModel: User.MOCK_USER)
 }
 
 struct OptionView: View {

@@ -32,6 +32,9 @@
 		2A378F9C2BFEF4C300032098 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A378F9B2BFEF4C300032098 /* RootView.swift */; };
 		2A378F9E2BFEF4EC00032098 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A378F9D2BFEF4EC00032098 /* RootViewModel.swift */; };
 		2A378FA02C01055300032098 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A378F9F2C01055300032098 /* UserService.swift */; };
+		2A378FA32C01DC6000032098 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 2A378FA22C01DC6000032098 /* Kingfisher */; };
+		2A378FA52C01DD8400032098 /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A378FA42C01DD8400032098 /* ImageUploader.swift */; };
+		2A378FA82C034A4A00032098 /* NewMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A378FA72C034A4A00032098 /* NewMessageViewModel.swift */; };
 		2A4231002BDABFE800EF92A5 /* WhatsApp_CloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4230FF2BDABFE800EF92A5 /* WhatsApp_CloneApp.swift */; };
 		2A4231022BDABFE800EF92A5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4231012BDABFE800EF92A5 /* ContentView.swift */; };
 		2A4231042BDABFEB00EF92A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A4231032BDABFEB00EF92A5 /* Assets.xcassets */; };
@@ -72,6 +75,8 @@
 		2A378F9B2BFEF4C300032098 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		2A378F9D2BFEF4EC00032098 /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
 		2A378F9F2C01055300032098 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		2A378FA42C01DD8400032098 /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
+		2A378FA72C034A4A00032098 /* NewMessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageViewModel.swift; sourceTree = "<group>"; };
 		2A4230FC2BDABFE800EF92A5 /* WhatsApp Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WhatsApp Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A4230FF2BDABFE800EF92A5 /* WhatsApp_CloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsApp_CloneApp.swift; sourceTree = "<group>"; };
 		2A4231012BDABFE800EF92A5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -100,6 +105,7 @@
 				2A378F942BFE632400032098 /* FirebaseStorage in Frameworks */,
 				2A378F902BFE632400032098 /* FirebaseFirestore in Frameworks */,
 				2A378F922BFE632400032098 /* FirebaseFirestoreSwift in Frameworks */,
+				2A378FA32C01DC6000032098 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +192,14 @@
 			isa = PBXGroup;
 			children = (
 				2A378F9D2BFEF4EC00032098 /* RootViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2A378FA62C034A4000032098 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2A378FA72C034A4A00032098 /* NewMessageViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -292,6 +306,7 @@
 		2A4231132BDAC2FC00EF92A5 /* NewMessage */ = {
 			isa = PBXGroup;
 			children = (
+				2A378FA62C034A4000032098 /* ViewModel */,
 				2A42312F2BDE45C300EF92A5 /* View */,
 			);
 			path = NewMessage;
@@ -382,6 +397,7 @@
 			children = (
 				2A378F952BFE66D700032098 /* AuthService.swift */,
 				2A378F9F2C01055300032098 /* UserService.swift */,
+				2A378FA42C01DD8400032098 /* ImageUploader.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -451,6 +467,7 @@
 				2A378F8F2BFE632400032098 /* FirebaseFirestore */,
 				2A378F912BFE632400032098 /* FirebaseFirestoreSwift */,
 				2A378F932BFE632400032098 /* FirebaseStorage */,
+				2A378FA22C01DC6000032098 /* Kingfisher */,
 			);
 			productName = "WhatsApp Clone";
 			productReference = 2A4230FC2BDABFE800EF92A5 /* WhatsApp Clone.app */;
@@ -482,6 +499,7 @@
 			mainGroup = 2A4230F32BDABFE800EF92A5;
 			packageReferences = (
 				2A378F8C2BFE632400032098 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				2A378FA12C01DC6000032098 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 2A4230FD2BDABFE800EF92A5 /* Products */;
 			projectDirPath = "";
@@ -513,10 +531,12 @@
 				2A42313A2BE526FE00EF92A5 /* ChatViewModel.swift in Sources */,
 				2A378F6F2BF8D35400032098 /* ProfileViewModel.swift in Sources */,
 				2A378F622BF66BA400032098 /* ChatBubble.swift in Sources */,
+				2A378FA82C034A4A00032098 /* NewMessageViewModel.swift in Sources */,
 				2A42312E2BDE45BA00EF92A5 /* NewMessageView.swift in Sources */,
 				2A378F682BF897FE00032098 /* Message.swift in Sources */,
 				2A378F722BFA01E400032098 /* SettingsView.swift in Sources */,
 				2A378FA02C01055300032098 /* UserService.swift in Sources */,
+				2A378FA52C01DD8400032098 /* ImageUploader.swift in Sources */,
 				2A378F7D2BFA63D000032098 /* LoginView.swift in Sources */,
 				2A378F652BF885D600032098 /* Date.swift in Sources */,
 				2A378F9C2BFEF4C300032098 /* RootView.swift in Sources */,
@@ -759,6 +779,14 @@
 				minimumVersion = 10.26.0;
 			};
 		};
+		2A378FA12C01DC6000032098 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.11.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -781,6 +809,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2A378F8C2BFE632400032098 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		2A378FA22C01DC6000032098 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A378FA12C01DC6000032098 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
