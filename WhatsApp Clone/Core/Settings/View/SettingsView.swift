@@ -12,18 +12,24 @@ struct SettingsView: View {
     
     @Environment(\.dismiss) private var dismiss
     @State private var viewModel: SettingsViewModel = SettingsViewModel()
+    
+    private var user : User?
+    
+    init(userModel: User? ){
+        self.user = userModel
+    }
     var body: some View {
         ScrollView{
             VStack(alignment:.leading){
                 NavigationLink {
-                    ProfileView()
+                    ProfileView(userModel: user)
                         .navigationBarBackButtonHidden()
                 } label: {
                     HStack(alignment:.top, spacing:12){
-                        CircularProfileImageView(imageSize: ProfileImageSize.large, user: User.MOCK_USER)
+                        CircularProfileImageView(imageSize: ProfileImageSize.large, user: user )
                         
                         VStack(alignment:.leading){
-                            Text(User.MOCK_USER.fullName)
+                            Text(user?.fullName ?? "No Name")
                                 .font(.title2)
                                 .foregroundStyle(Color(.black))
                                 .fontWeight(.semibold)
@@ -112,5 +118,5 @@ struct SettingsView: View {
 }
 
 #Preview {
-    SettingsView()
+    SettingsView(userModel: User.MOCK_USER)
 }

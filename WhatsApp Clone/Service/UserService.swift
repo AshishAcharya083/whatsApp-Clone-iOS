@@ -23,7 +23,7 @@ class UserService{
     
     @MainActor
     func fetchCurrentUser() async throws{
-        print("FETCH CURRENT USER CALLED")
+      
         do{
             
             guard let uid = Auth.auth().currentUser?.uid else {
