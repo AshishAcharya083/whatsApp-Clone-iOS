@@ -26,14 +26,14 @@ class AuthService{
     @MainActor
     func createUser(email: String , password: String , fullName: String , phoneNumber: String  ) async throws{
 
-        let result = try await Auth.auth().createUser(withEmail: email, password: password)
+        let result = try await Auth.auth().createUser(withEmail: email, password: password )
     
         self.userSession = result.user
         try await uploadData(email: email, fullName: fullName, phoneNumber: phoneNumber, id: result.user.uid)
     }
     
     private func uploadData(email:String , fullName: String , phoneNumber: String , id: String) async throws{
-        let user = User(fullName: fullName, email: email, phoneNumber: phoneNumber  , profileImageUrl: nil)
+        let user = User(id:  id, fullName: fullName, email: email, phoneNumber: phoneNumber  , profileImageUrl: nil)
         guard let encodedUser = try? Firestore.Encoder().encode(user) else {return}
         try await Firestore.firestore().collection("Users").document(id).setData(encodedUser)
     }

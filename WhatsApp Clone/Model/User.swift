@@ -14,12 +14,12 @@ struct User : Codable , Hashable , Identifiable{
     let fullName: String
     let email: String
     let phoneNumber : String
-    let profileImageUrl: String?
+    var profileImageUrl: String?
     
     
 }
 
 
 extension User{
-    static let MOCK_USER = User(fullName: "Ashish Acharya", email: "imashish083@gmail.com", phoneNumber: "9829292929", profileImageUrl: "elizabeth")
+    static let MOCK_USER = User(fullName: "Ashish Acharya", email: "imashish083@gmail.com", phoneNumber: "9829292929", profileImageUrl: nil)
 }
