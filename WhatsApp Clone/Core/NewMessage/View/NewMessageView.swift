@@ -10,6 +10,7 @@ import SwiftUI
 struct NewMessageView: View {
     @Environment(\.dismiss) private var dismiss
     @StateObject private var viewModel = NewMessageViewModel()
+    @Binding var selectedUser: User?
     var body: some View {
         
         NavigationStack{

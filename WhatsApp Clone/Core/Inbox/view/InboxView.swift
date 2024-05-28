@@ -10,6 +10,7 @@ import SwiftUI
 
 struct InboxView : View{
     @ObservedObject var inboxViewModel : InboxViewModel = InboxViewModel()
+    @State private var selectedUser: User?
     var body : some View{
        
         GeometryReader { proxy in
