@@ -20,7 +20,7 @@ struct InboxView : View{
                         ForEach(0 ..< 5){
                             _ in
                             NavigationLink{
-                                ChatView()
+                                ChatView(selectedUser: User.MOCK_USER)
                                     .navigationBarBackButtonHidden()
                             }label: {
                                 InboxRowView(width: proxy.size.width )
@@ -40,8 +40,17 @@ struct InboxView : View{
                     })
                     
                 }
-                .fullScreenCover(isPresented: $inboxViewModel.showNewMessage, content: {
-                    NewMessageView()
+                .fullScreenCover(isPresented: $inboxViewModel.showNewMessage){
+                    NewMessageView(selectedUser: $selectedUser)
+                }
+                .onChange(of: selectedUser, {
+                    inboxViewModel.showChat = selectedUser != nil
+                })
+                .navigationDestination(isPresented: $inboxViewModel.showChat, destination: {
+                    if let selectedUser = selectedUser {
+                        ChatView(selectedUser: selectedUser)
+                            .navigationBarBackButtonHidden()
+                    }
                 })
                 .toolbar{
                     ToolbarItem(placement:.topBarLeading){
@@ -59,7 +68,6 @@ struct InboxView : View{
                             } label: {
                                 Image(systemName: "ellipsis")
                             }
-
                         }.fontWeight(.semibold)
                             .foregroundColor(.white)
                         

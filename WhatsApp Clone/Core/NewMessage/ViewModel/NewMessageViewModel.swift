@@ -15,11 +15,13 @@ class NewMessageViewModel : ObservableObject{
     init() {
         Task{
             try await self.fetchContacts()
+            
         }
     }
     
     private func fetchContacts() async throws{
         print("fetch contacts called")
+        
         let users = try await  UserService.shared.fetchAllUser()
        guard let currentUserId =  Auth.auth().currentUser?.uid else {return}
         print("all users length is \(users.count)")
@@ -27,3 +29,6 @@ class NewMessageViewModel : ObservableObject{
         print("users are \(self.users)")
     }
  }
+
+
+

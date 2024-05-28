@@ -38,6 +38,10 @@ struct NewMessageView: View {
                                     .foregroundStyle(.gray)
                             }
                         }.padding(.bottom , 20)
+                            .onTapGesture {
+                                selectedUser = user
+                                dismiss()
+                            }
                     }
                     
                     
@@ -77,7 +81,7 @@ struct NewMessageView: View {
 }
 
 #Preview {
-    NewMessageView()
+    NewMessageView(selectedUser: .constant(User.MOCK_USER))
 }
 
 

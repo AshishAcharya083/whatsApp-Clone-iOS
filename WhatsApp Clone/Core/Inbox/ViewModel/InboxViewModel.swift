@@ -14,6 +14,7 @@ class InboxViewModel : ObservableObject{
     @Published var showNewMessage: Bool = false
     @Published var currentUser: User?
     private var cancellable : Set<AnyCancellable> = Set<AnyCancellable>()
+    @Published var showChat : Bool = false
     
     
     init() {
